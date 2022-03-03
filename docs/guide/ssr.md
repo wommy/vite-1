@@ -85,7 +85,7 @@ async function createServer() {
   // use vite's connect instance as middleware
   app.use(vite.middlewares)
 
-  app.use('*', async (req, res) => {
+  app.use('*', async (req, res, next) => {
     // serve index.html - we will tackle this next
   })
 
